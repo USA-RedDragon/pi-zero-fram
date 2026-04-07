@@ -1,0 +1,7 @@
+[build]
+target = "aarch64-unknown-none"
+
+[target.aarch64-unknown-none]
+rustflags = ["-C", "link-arg=-T", "-C", "link-arg=link.ld", "-C", "link-arg=--gc-sections"]
+
+runner = "echo 'Copy target/aarch64-unknown-none/release/pi-zero-fram to kernel8.img on SD card'"

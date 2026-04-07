@@ -1,0 +1,20 @@
+[package]
+name = "pi-zero-fram"
+version = "0.1.0"
+edition = "2021"
+authors = ["reddragon"]
+description = "Bare-metal FRAM text editor for Raspberry Pi Zero 2 W"
+
+[dependencies]
+usb-device = "=0.3.2"
+usbd-serial = "=0.2.2"
+
+[profile.release]
+opt-level = 2
+lto = true
+debug = false
+panic = "abort"
+strip = true
+
+[profile.dev]
+panic = "abort"
